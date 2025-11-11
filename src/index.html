@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ИП Пальшин А.В. Электромонтаж - Услуги электромонтажа любой сложности
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Background circle -->
+      <!-- <div class="background-circle"></div> -->
+
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <!-- Logo section -->
+          <div class="logo-section">
+            <div class="logo-icon">
+              <img src="../public/images/logo.svg" alt="" />
+            </div>
+            <div class="company-name">ИП Пальшин А.В. Электромонтаж</div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="nav-menu">
+            <a href="#services" class="nav-item">Услуги</a>
+            <a href="#pricing" class="nav-item">Цены</a>
+            <a href="#reviews" class="nav-item active">Отзывы</a>
+          </nav>
+
+          <!-- Desktop Contact Info -->
+          <div class="contact-info">
+            <div class="phone">+7 999 999 99-99</div>
+            <div class="address">Адрес: Какая-нибудь 8, дом 3</div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+            <svg
+              class="menu-icon"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+            <svg
+              class="close-icon"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              style="display: none"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+          <nav class="mobile-nav">
+            <a href="#services" class="nav-item">Услуги</a>
+            <a href="#pricing" class="nav-item">Цены</a>
+            <a href="#reviews" class="nav-item active">Отзывы</a>
+          </nav>
+          <div class="mobile-contact">
+            <div class="phone">+7 999 999 99-99</div>
+            <div class="address">Адрес: Какая-нибудь 8, дом 3</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main content container -->
+      <div class="main-content" id="main">
+        <!-- Desktop: Left content, Mobile: All content stacked -->
+        <div class="content-left">
+          <h1 class="main-title">Услуги электромонтажа любой сложности</h1>
+
+          <div class="description-and-features-section">
+            <div class="description-section">
+              <p class="description-text">
+                Качественно и недорого выполним работу в любом районе Перми
+              </p>
+
+              <p class="additional-text">
+                Имеется возможность выполнения крупных проектов по всей России
+              </p>
+            </div>
+
+            <!-- Features section -->
+            <div class="features-section">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 51 51" fill="none">
+                    <path
+                      d="M32.9375 35.9125L35.9125 32.9375C36.125 32.725 36.2312 32.4771 36.2312 32.1938C36.2312 31.9104 36.125 31.6625 35.9125 31.45L28.6875 24.1719C28.8292 23.7823 28.9354 23.3927 29.0062 23.0031C29.0771 22.6135 29.1125 22.1708 29.1125 21.675C29.1125 19.6563 28.3957 17.93 26.962 16.4964C25.5283 15.0627 23.8014 14.3452 21.7812 14.3438C21.1792 14.3438 20.5771 14.4238 19.975 14.5839C19.3729 14.744 18.7885 14.965 18.2219 15.2469L23.2156 20.2406L20.2406 23.2156L15.2469 18.2219C14.9635 18.7885 14.7425 19.3729 14.5839 19.975C14.4252 20.5771 14.3452 21.1792 14.3437 21.7813C14.3437 23.8 15.0613 25.5269 16.4964 26.962C17.9315 28.3971 19.6577 29.1139 21.675 29.1125C22.1354 29.1125 22.5696 29.0771 22.9776 29.0063C23.3856 28.9354 23.7837 28.8292 24.1719 28.6875L31.45 35.9125C31.6625 36.125 31.9104 36.2313 32.1937 36.2313C32.4771 36.2313 32.725 36.125 32.9375 35.9125ZM25.5 46.75C22.5604 46.75 19.7979 46.1918 17.2125 45.0755C14.6271 43.9592 12.3781 42.4455 10.4656 40.5344C8.55312 38.6233 7.03942 36.3743 5.9245 33.7875C4.80958 31.2007 4.25142 28.4382 4.25 25.5C4.24858 22.5618 4.80675 19.7993 5.9245 17.2125C7.04225 14.6257 8.55596 12.3767 10.4656 10.4656C12.3753 8.55454 14.6242 7.04083 17.2125 5.9245C19.8008 4.80817 22.5632 4.25 25.5 4.25C28.4367 4.25 31.1992 4.80817 33.7875 5.9245C36.3757 7.04083 38.6247 8.55454 40.5344 10.4656C42.444 12.3767 43.9585 14.6257 45.0776 17.2125C46.1968 19.7993 46.7543 22.5618 46.75 25.5C46.7458 28.4382 46.1876 31.2007 45.0755 33.7875C43.9634 36.3743 42.4497 38.6233 40.5344 40.5344C38.619 42.4455 36.3701 43.9599 33.7875 45.0776C31.2049 46.1954 28.4424 46.7528 25.5 46.75Z"
+                      fill="#FFB237"
+                    />
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  Любой мелкий ремонт и другие<br />задачи по дому
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 39 43" fill="none">
+                    <path
+                      d="M19.1667 0C29.7524 0 38.3333 8.58092 38.3333 19.1667C38.3333 29.7524 29.7524 38.3333 19.1667 38.3333C8.58092 38.3333 0 29.7524 0 19.1667C0 8.58092 8.58092 0 19.1667 0ZM19.1667 7.66667C18.6583 7.66667 18.1708 7.8686 17.8114 8.22805C17.4519 8.58749 17.25 9.075 17.25 9.58334V19.1667C17.2501 19.675 17.4521 20.1624 17.8116 20.5218L23.5616 26.2718C23.9231 26.6209 24.4072 26.8141 24.9098 26.8097C25.4123 26.8053 25.893 26.6038 26.2484 26.2484C26.6038 25.893 26.8053 25.4123 26.8097 24.9098C26.8141 24.4072 26.6209 23.9231 26.2718 23.5616L21.0833 18.3732V9.58334C21.0833 9.075 20.8814 8.58749 20.522 8.22805C20.1625 7.8686 19.675 7.66667 19.1667 7.66667Z"
+                      fill="#FFB237"
+                    />
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  Приедем в течение часа или<br />в удобное время
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 37 37" fill="none">
+                    <path
+                      d="M35.4583 15.4167C35.4583 14.5989 35.1335 13.8147 34.5552 13.2364C33.977 12.6582 33.1927 12.3333 32.375 12.3333H22.6317L24.1117 5.28792C24.1425 5.13375 24.1579 4.96417 24.1579 4.79458C24.1579 4.1625 23.8958 3.57667 23.4796 3.16042L21.8454 1.54167L11.7012 11.6858C11.1308 12.2563 10.7917 13.0271 10.7917 13.875V29.2917C10.7917 30.1094 11.1165 30.8937 11.6948 31.4719C12.273 32.0502 13.0572 32.375 13.875 32.375H27.75C29.0296 32.375 30.1242 31.6042 30.5867 30.4942L35.2425 19.6254C35.3812 19.2708 35.4583 18.9008 35.4583 18.5V15.4167ZM1.54167 32.375H7.70833V13.875H1.54167V32.375Z"
+                      fill="#FFB237"
+                    />
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  Выезд мастера - бесплатно<br />Работаем круглосуточно!
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 37 37" fill="none">
+                    <g clipPath="url(#clip0_1_76)">
+                      <path
+                        d="M25.6154 0.267538C19.4748 0.267538 14.4969 3.01265 14.4969 6.40385C14.4969 9.79504 19.4762 12.5416 25.6154 12.5416C31.756 12.5416 36.7339 9.79504 36.7339 6.40385C36.7339 3.01265 31.7545 0.267538 25.6154 0.267538ZM36.7339 8.22681C36.731 11.618 31.756 14.3645 25.6154 14.3645C19.4919 14.3645 14.5253 11.6479 14.4969 8.27235V10.6731C14.4969 12.1218 15.4247 13.4481 16.9446 14.4983C18.4815 14.9167 19.8505 15.4973 20.9904 16.2316C22.4035 16.5902 23.9575 16.8094 25.6154 16.8094C31.756 16.8094 36.7339 14.0643 36.7339 10.6731V8.22681ZM36.7339 12.496C36.7339 15.8872 31.756 18.6338 25.6154 18.6338C24.8683 18.6338 24.1425 18.5783 23.4367 18.5C23.9936 19.2501 24.3736 20.1166 24.5481 21.0345C24.9024 21.0544 25.2525 21.0786 25.6154 21.0786C31.756 21.0786 36.7339 18.3335 36.7339 14.9423V12.496ZM11.3846 15.92C5.24404 15.92 0.266115 18.6665 0.266115 22.0577C0.266115 25.4489 5.24546 28.1954 11.3846 28.1954C17.5252 28.1954 22.5031 25.4489 22.5031 22.0577C22.5031 18.6665 17.5238 15.92 11.3846 15.92ZM36.7339 16.7653C36.731 20.1565 31.756 22.903 25.6154 22.903C25.2582 22.903 24.8967 22.8774 24.5481 22.8575C24.5324 22.9642 24.5239 23.1065 24.504 23.2132C24.5751 23.4281 24.6363 23.6402 24.6363 23.8821V25.3052C24.9593 25.3208 25.2838 25.3478 25.6154 25.3478C31.756 25.3478 36.7339 22.6027 36.7339 19.2115V16.7653ZM36.7339 21.0345C36.731 24.4257 31.756 27.1722 25.6154 27.1722C25.2582 27.1722 24.8967 27.1466 24.5481 27.1267C24.5324 27.2334 24.5239 27.3757 24.504 27.4825C24.5751 27.6959 24.6363 27.9094 24.6363 28.1513V29.5744C24.9593 29.59 25.2838 29.6171 25.6154 29.6171C31.756 29.6171 36.7339 26.872 36.7339 23.4808V21.0345ZM22.5031 23.8807C22.5003 27.2718 17.5252 30.0184 11.3846 30.0184C5.26112 30.0184 0.294577 27.3017 0.266115 23.9248V26.3269C0.266115 29.7181 5.24262 32.4647 11.3846 32.4647C17.5266 32.4647 22.5031 29.7181 22.5031 26.3269V23.8807ZM22.5031 28.1499C22.5003 31.5411 17.5252 34.2876 11.3846 34.2876C5.26112 34.2876 0.294577 31.571 0.266115 28.194V30.5962C0.266115 33.9873 5.24262 36.7339 11.3846 36.7339C17.5266 36.7339 22.5031 33.9873 22.5031 30.5962V28.1499Z"
+                        fill="#FFB237"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_76">
+                        <rect fill="white" height="37" width="37" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="feature-text">
+                  Низкие цены на услуги<br />Гарантия до 1 года
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-container">
+          <h2 class="form-title">Оставьте заявку</h2>
+
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Ваше имя" />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="tel"
+                class="form-input"
+                placeholder="Контактный телефон"
+              />
+            </div>
+
+            <div class="form-group">
+              <select class="form-select">
+                <option>Выберите услуги</option>
+                <option>Электромонтаж</option>
+                <option>Ремонт проводки</option>
+                <option>Установка розеток</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                class="form-textarea"
+                placeholder="Что вас интересует?"
+              ></textarea>
+            </div>
+
+            <p class="form-disclaimer">
+              Нажимая на кнопку "Отправить заявку", вы принимаете условия
+              <a href="#">Согласия</a> и
+              <a href="#">Политики конфиденциальности</a>.
+            </p>
+
+            <div class="submit-button-container">
+              <button type="submit" class="submit-button">
+                Отправить заявку
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Популярные услуги  -->
+      <div class="services-container" id="services">
+        <h2>Популярные услуги</h2>
+
+        <div class="services">
+          <div class="service">
+            <img
+              src="..\public\images\service1.jpg"
+              alt="Сборка электрощитов"
+            />
+            <p>Сборка электрощитов</p>
+          </div>
+          <div class="service">
+            <img
+              src="..\public\images\service2.png"
+              alt="Проектирование электрических систем"
+            />
+            <p>Проектирование электрических систем</p>
+          </div>
+          <div class="service">
+            <img
+              src="..\public\images\service3.jpg"
+              alt="Обслуживание электрооборудования"
+            />
+            <p>Обслуживание электрооборудования</p>
+          </div>
+          <div class="service">
+            <img
+              src="..\public\images\service4.webp"
+              alt="Прокладка кабельных линий"
+            />
+            <p>Прокладка кабельных линий</p>
+          </div>
+          <div class="service">
+            <img
+              src="..\public\images\service5.jpg"
+              alt="Подключение теплого пола"
+            />
+            <p>Подключение теплого пола</p>
+          </div>
+          <div class="service">
+            <img
+              src="..\public\images\service6.webp"
+              alt="Установка и замена систем освещения"
+            />
+            <p>Установка и замена систем освещения</p>
+          </div>
+          <div class="service">
+            <img
+              src="..\public\images\service7.jpg"
+              alt="Услуги электротехнической лаборатории"
+            />
+            <p>Услуги электротехнической лаборатории</p>
+          </div>
+          <div class="service">
+            <img
+              src="..\public\images\service8.jpg"
+              alt="Установка и замена выключателей и розеток"
+            />
+            <p>Установка и замена выключателей и розеток</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Цены на услуги -->
+      <div class="price-container-wrapper" id="pricing">
+        <div class="price-container">
+          <div class="price-header">
+            <h1>Цены на услуги электрика</h1>
+            <p>Профессиональные электромонтажные работы</p>
+          </div>
+
+          <!-- Установка люстр, светильников -->
+          <div class="category-section">
+            <h2 class="category-title">Установка люстр, светильников</h2>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Установка люстры на натяжной потолок
+              </div>
+              <div class="price-column">от 1200 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Установка люстры с пультом
+              </div>
+              <div class="price-column">от 1500 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Установка люстры более 4 м высоты или более 5 кг
+              </div>
+              <div class="price-column">от 2000 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Установка светильников
+              </div>
+              <div class="price-column">от 300 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Установка бра
+              </div>
+              <div class="price-column">от 400 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Замена бра
+              </div>
+              <div class="price-column">от 300 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Сборка люстры
+              </div>
+              <div class="price-column">от 400 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Ремонт люстры
+              </div>
+              <div class="price-column">от 1000 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Ремонт люстры с пультом
+              </div>
+              <div class="price-column">от 1500 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Ремонт светодиодной люстры
+              </div>
+              <div class="price-column">от 1400 руб</div>
+            </div>
+          </div>
+
+          <!-- Установка светодиодных панелей -->
+          <div class="category-section">
+            <h2 class="category-title">Установка светодиодных панелей</h2>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                В потолок Армстронг
+              </div>
+              <div class="price-column">от 400 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Накладная
+              </div>
+              <div class="price-column">от 450 руб</div>
+            </div>
+          </div>
+
+          <!-- Полная замена проводки -->
+          <div class="category-section">
+            <h2 class="category-title">Полная замена проводки</h2>
+
+            <div class="price-row highlight-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                В стоимость не входит материал
+                <div class="note-text">цена по договоренности</div>
+              </div>
+              <div class="price-column">цена по договоренности</div>
+            </div>
+
+            <div class="complex-service">
+              <h3 style="color: #2c3e50; margin-bottom: 15px">
+                Для стен из материала гипс или кирпич:
+              </h3>
+              <div class="price-row">
+                <div class="service-column">
+                  <span class="service-bullet">•</span>
+                  Для квартиры 1 комнаты
+                </div>
+                <div class="price-column">от 25000 руб</div>
+              </div>
+              <div class="price-row">
+                <div class="service-column">
+                  <span class="service-bullet">•</span>
+                  Для квартиры 2 комнаты
+                </div>
+                <div class="price-column">от 28000 руб</div>
+              </div>
+              <div class="price-row">
+                <div class="service-column">
+                  <span class="service-bullet">•</span>
+                  Другие объекты
+                </div>
+                <div class="price-column">индивидуально</div>
+              </div>
+            </div>
+
+            <div class="complex-service">
+              <h3 style="color: #2c3e50; margin-bottom: 15px">
+                Материал стен – бетон
+              </h3>
+              <div class="price-row">
+                <div class="service-column">
+                  <span class="service-bullet">•</span>
+                  1-комнатная квартира
+                </div>
+                <div class="price-column">от 28000 руб</div>
+              </div>
+              <div class="price-row">
+                <div class="service-column">
+                  <span class="service-bullet">•</span>
+                  2-комнатная квартира
+                </div>
+                <div class="price-column">от 33000 руб</div>
+              </div>
+              <div class="price-row">
+                <div class="service-column">
+                  <span class="service-bullet">•</span>
+                  3-комнатная квартира
+                </div>
+                <div class="price-column">от 37000 руб</div>
+              </div>
+              <div class="price-row">
+                <div class="service-column">
+                  <span class="service-bullet">•</span>
+                  Другие объекты
+                </div>
+                <div class="price-column">индивидуально</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Остальные секции будут аналогично -->
+          <!-- Для краткости покажу только несколько секций -->
+
+          <!-- Электрика на кухне -->
+          <div class="category-section">
+            <h2 class="category-title">Электрика на кухне</h2>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Перенос силовой розетки электроплиты
+              </div>
+              <div class="price-column">от 2000 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Дополнительные розетки к существующим
+              </div>
+              <div class="price-column">от 2000 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Полная разводка электрики под новый кухонный гарнитур
+              </div>
+              <div class="price-column">от 5000 руб</div>
+            </div>
+          </div>
+
+          <!-- Прочие услуги -->
+          <div class="category-section">
+            <h2 class="category-title">Прочие услуги</h2>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Установка звонка
+              </div>
+              <div class="price-column">от 400 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Установка кнопки звонка
+              </div>
+              <div class="price-column">от 400 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Подключить вытяжку
+              </div>
+              <div class="price-column">от 550 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Просверлить сквозное отверстие (диаметр до 20 мм)
+              </div>
+              <div class="price-column">от 200 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Заменить лампу
+              </div>
+              <div class="price-column">от 50 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Подключить терморегулятор
+              </div>
+              <div class="price-column">от 600 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Контур защитного заземления
+              </div>
+              <div class="price-column">от 5000 руб</div>
+            </div>
+
+            <div class="price-row">
+              <div class="service-column">
+                <span class="service-bullet">•</span>
+                Установка распределительной коробки открытой
+              </div>
+              <div class="price-column">от 100 руб</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-container" id="reviews">
+        <section class="reviews-section">
+          <div class="section-header">
+            <h2 class="section-title">Отзывы клиентов</h2>
+          </div>
+
+          <div class="swiper-container">
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Swiper -->
+            <div class="swiper reviews-slider">
+              <div class="swiper-wrapper">
+                <!-- Review Slide 1 -->
+                <div class="swiper-slide">
+                  <div class="review-card">
+                    <div class="review-header">
+                      <div class="review-avatar">С</div>
+                      <h3 class="review-author">Сергей</h3>
+                    </div>
+                    <p class="review-text">
+                      Время было позднее, когда в комнате потух свет и запахло
+                      горелой проводкой. В стене был странный треск, решили не
+                      ждать утра, нашли вашу службу и вызвали электрика на
+                      сейчас. Спасибо за быстрой отклик, мастер приехал очень
+                      быстро, заменил часть сгоревшей проводки, поставил автомат
+                      в щитке. Договорились, что на следующий день вызовом
+                      электрика уже на запланированный монтаж проводим. Спасибо.
+                    </p>
+                    <div class="review-meta">
+                      <span class="review-date">07.06.2025</span>
+                      <span class="review-master"
+                        >Мастер: Иванов Иван Иванович</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="review-card">
+                    <div class="review-header">
+                      <div class="review-avatar">С</div>
+                      <h3 class="review-author">Сергей</h3>
+                    </div>
+                    <p class="review-text">
+                      Время было позднее, когда в комнате потух свет и запахло
+                      горелой проводкой. В стене был странный треск, решили не
+                      ждать утра, нашли вашу службу и вызвали электрика на
+                      сейчас. Спасибо за быстрой отклик, мастер приехал очень
+                      быстро, заменил часть сгоревшей проводки, поставил автомат
+                      в щитке. Договорились, что на следующий день вызовом
+                      электрика уже на запланированный монтаж проводим. Спасибо.
+                    </p>
+                    <div class="review-meta">
+                      <span class="review-date">07.06.2025</span>
+                      <span class="review-master"
+                        >Мастер: Иванов Иван Иванович</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="review-card">
+                    <div class="review-header">
+                      <div class="review-avatar">С</div>
+                      <h3 class="review-author">Сергей</h3>
+                    </div>
+                    <p class="review-text">
+                      Время было позднее, когда в комнате потух свет и запахло
+                      горелой проводкой. В стене был странный треск, решили не
+                      ждать утра, нашли вашу службу и вызвали электрика на
+                      сейчас. Спасибо за быстрой отклик, мастер приехал очень
+                      быстро, заменил часть сгоревшей проводки, поставил автомат
+                      в щитке. Договорились, что на следующий день вызовом
+                      электрика уже на запланированный монтаж проводим. Спасибо.
+                    </p>
+                    <div class="review-meta">
+                      <span class="review-date">07.06.2025</span>
+                      <span class="review-master"
+                        >Мастер: Иванов Иван Иванович</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review Slide 4 -->
+                <div class="swiper-slide">
+                  <div class="review-card">
+                    <div class="review-header">
+                      <div class="review-avatar">С</div>
+                      <h3 class="review-author">Сергей</h3>
+                    </div>
+                    <p class="review-text">
+                      Время было позднее, когда в комнате потух свет и запахло
+                      горелой проводкой. В стене был странный треск, решили не
+                      ждать утра, нашли вашу службу и вызвали электрика на
+                      сейчас. Спасибо за быстрой отклик, мастер приехал очень
+                      быстро, заменил часть сгоревшей проводки, поставил автомат
+                      в щитке. Договорились, что на следующий день вызовом
+                      электрика уже на запланированный монтаж проводим. Спасибо.
+                    </p>
+                    <div class="review-meta">
+                      <span class="review-date">07.06.2025</span>
+                      <span class="review-master"
+                        >Мастер: Иванов Иван Иванович</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div class="footer-text-container">
+          <span>ИП Пальшин А.В.<br />Электромонтаж</span>
+          <span class="footer-contact-info"
+            >+7 999 999 99-99<br />Адрес: Какая-нибудь 8, дом 3</span
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".reviews-slider", {
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // },
+        speed: 800,
+        grabCursor: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          1400: {
+            slidesPerView: 3,
+          },
+          860: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    </script>
+    <script src=".\main.js"></script>
+  </body>
+</html>
